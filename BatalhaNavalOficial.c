@@ -22,13 +22,31 @@ int main(){
     };
 
     //Posicionando Navio Horizontal
-    for(int i = 2; i <= 4; i++){
+    for(int i = 2; i < 5; i++){
         Tabuleiro[3][i] = 3;
     }
 
     //Posicionando Navio Vertical
-    for(int i = 5; i <= 8; i++){
+    for(int i = 5; i < 8; i++){
         Tabuleiro[i][8] = 3;
+    }
+
+    //Posicionando Navios Diagonais
+
+    for(int i = 5; i < 8; i ++){
+        for(int j = 5; j < 8; j++){
+            if(i = j){
+                Tabuleiro[i][j] = 3;
+            }
+        }  
+    }
+    
+    for(int i = 0; i < 10; i ++){
+        for(int j = 8; j > 5; j--){
+            if(i + j == 8){
+                Tabuleiro[i][j] = 3;
+            }
+        }  
     }
 
     //Exibindo O Tabuleiro
